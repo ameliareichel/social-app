@@ -1,0 +1,56 @@
+.form-signup {
+    margin-bottom: 60px;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+.signup-form {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(18, 13, 37);
+    width: 185px;
+    height: 370px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 12px;
+    padding: 50px 20px;
+}
+
+label {
+    display: inline-block;
+    color: rgb(204, 202, 255);
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: rgb(204, 202, 255);
+    margin-bottom: 10px;
+    flex-basis: 100%;
+    border: none;
+    padding: 8px;
+    border-radius: 7px;
+    transition: all 0.3s;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+    box-shadow: rgb(119, 95, 255) 1px 1px 12px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    margin: 0 auto;
+    color: rgb(18, 13, 37);
+    text-transform: uppercase;
+    margin-top: 30px;
+    padding: 8px;
+    flex-basis: 45%;
+}
+
+input[type="submit"]:hover {
+    color: rgb(204, 202, 255);
+    background-color: rgb(119, 95, 255);
+}

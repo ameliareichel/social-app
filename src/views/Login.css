@@ -1,0 +1,46 @@
+h2 {
+    padding-bottom: 15px;
+}
+
+.login-form {
+    background-color: rgb(18, 13, 37);
+    width: 200px;
+    height: 230px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 12px;
+    padding-top: 50px;
+}
+
+label {
+    display: inline-block;
+    color: rgb(204, 202, 255);
+    margin-bottom: 15px;
+}
+
+input {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+input:hover,
+input:focus {
+    outline: none;
+    box-shadow: rgb(119, 95, 255) 1px 1px 12px;
+}
+
+input[type="submit"] {
+    color: rgb(18, 13, 37);
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 1px;
+    width: 65px;
+}
+
+input[type="submit"]:hover {
+    color: rgb(204, 202, 255);
+    background-color: rgb(119, 95, 255);
+}
