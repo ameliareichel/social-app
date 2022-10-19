@@ -5,8 +5,8 @@ h2 {
 .login-form {
     background-color: rgb(18, 13, 37);
     width: 200px;
-    height: 230px;
     margin: 0 auto;
+    margin-bottom: 50px;
     border-radius: 15px;
     padding: 12px;
     padding-top: 50px;
