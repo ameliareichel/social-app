@@ -10,6 +10,9 @@ function App() {
 
   axios.defaults.headers.common["Authorization"] = "Bearer " + (user ? user.jwt_token : "");
 
+  axios.defaults.headers.post["Content-Type"] = "application/json"
+
+
   return (
     <div className="App">
       <Navigation user={user} setUser={setUser} />

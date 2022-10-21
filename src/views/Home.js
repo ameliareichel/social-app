@@ -16,7 +16,7 @@ const Home = (props) => {
             .catch(error => console.error(error));
     };
 
-    const getMorePosts = () => {
+    const getMoreOldPosts = () => {
         axios.post('https://akademia108.pl/api/social-app/post/older-then', {
             date: posts[posts.length - 1].created_at
         })
@@ -26,22 +26,31 @@ const Home = (props) => {
             .catch(error => console.error(error));
     };
 
+    const getMoreNewPosts = () => {
+        axios.post('https://akademia108.pl/api/social-app/post/newer-then', {
+            date: posts[0].created_at
+        })
+            .then(res => {
+                setPosts(res.data.concat(posts));
+            })
+            .catch(error => console.error(error));
+    };
+
     useEffect(() => {
         getLastPosts();
     }, [props.user]);
 
-
     return (
         <div className='home'>
-            {props.user && <AddNewPost />}
+            {props.user && <AddNewPost addPost={getMoreNewPosts}/>}
             <div className='posts-list'>
                 {posts.map(post => {
                     return (
-                        <Post post={post} key={post.id} />
+                        <Post post={post} key={post.id} user={props.user} setPosts={setPosts}/>
                     );
                 })}
             </div>
-            <button className='more-posts' type='submit' onClick={getMorePosts} >Load More...</button>
+            <button className='more-posts' type='submit' onClick={getMoreOldPosts} >Load More...</button>
         </div>
     );
 };
