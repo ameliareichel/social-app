@@ -1,0 +1,31 @@
+.follow-recomm-container {
+    text-align: center;
+    background-color: rgb(18, 13, 37);
+    color: rgb(204, 202, 255);
+    margin: 30px auto;
+    margin-top: 60px;
+    padding: 40px 10px;
+    padding-top: 16px;
+    box-shadow: rgb(0, 0, 0) 1px 2px 15px;
+}
+
+.recomm-user-profile {
+    display: inline-block;
+    margin: 30px 50px;
+}
+
+.recomm-user-username {
+    font-weight: 400;
+    color: rgb(204, 202, 255);
+    margin: 10px auto;
+    margin-bottom: 16px;
+}
+
+button.follow {
+    font-size: 10px;
+    font-weight: 600;
+    width: 70px;
+    height: 30px;
+    padding: 8px;
+    margin: 0px auto;
+}

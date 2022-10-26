@@ -47,17 +47,28 @@ img {
     margin-right: 57px;
 }
 
-.like-symbol {
+.like-symbol,
+.like-symbol-liked {
     display: inline-block;
     transform: scale(1.3);
     margin-right: 2px;
     transition: all 0.3s;
+    color: rgb(119, 95, 255);
 }
 
-.like-symbol:hover {
-    color: rgb(119, 95, 255);
+.like-symbol-liked {
+    color: rgb(204, 202, 255);
+}
+
+.like-symbol:hover,
+.like-symbol-liked:hover {
+    color: rgb(204, 202, 255);
     cursor: pointer;
     transform: scale(1.4);
+}
+
+.like-symbol-liked:hover {
+    color: rgb(119, 95, 255);
 }
 
 .delete-symbol {
@@ -89,6 +100,7 @@ img {
 }
 
 .confirm-button {
+    display: inline-block;
     margin: 15px;
     margin-top: 16px;
     background-color: rgb(25, 20, 46);
@@ -107,4 +119,28 @@ img {
     background-color: rgb(119, 95, 255);
     box-shadow: rgb(119, 95, 255) 1px 1px 12px;
     cursor: pointer;
+}
+
+.link-to-log {
+    text-decoration: none;
+    color: rgb(204, 202, 255);
+}
+
+.log-to-like {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(18, 13, 37);
+    margin: 0 auto;
+    padding: 25px;
+    width: 300px;
+    border-radius: 24px;
+    box-shadow: rgb(119, 95, 255) 1px 2px 15px;
+}
+
+.log-to-like h2 {
+    font-size: 16px;
+    margin: 0 20px;
+    margin-bottom: 12px;
 }

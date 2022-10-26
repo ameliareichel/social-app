@@ -16,7 +16,7 @@ const AddNewPost = (props) => {
             axios.post('https://akademia108.pl/api/social-app/post/add', { content: postContent })
                 .then(() => {
                     props.addPost();
-                    setPostContent = '';
+                    setPostContent('');
                 })
                 .catch(error => console.error(error))
         }

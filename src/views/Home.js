@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Post from '../components/Post';
 import axios from 'axios';
 import AddNewPost from '../components/AddNewPost';
+import FollowRec from '../components/FollowRec';
 
 const Home = (props) => {
     const [posts, setPosts] = useState([]);
@@ -42,11 +43,12 @@ const Home = (props) => {
 
     return (
         <div className='home'>
-            {props.user && <AddNewPost addPost={getMoreNewPosts}/>}
+            {props.user && <FollowRec user={props.user} getLastPosts={getLastPosts} posts={posts}/>}
+            {props.user && <AddNewPost addPost={getMoreNewPosts} />}
             <div className='posts-list'>
                 {posts.map(post => {
                     return (
-                        <Post post={post} key={post.id} user={props.user} setPosts={setPosts}/>
+                        <Post post={post} key={post.id} user={props.user} setPosts={setPosts} />
                     );
                 })}
             </div>
