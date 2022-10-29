@@ -18,6 +18,7 @@
 .user-info {
     display: flex;
     justify-content: start;
+    align-items: center;
     margin: 0 40px;
 }
 
@@ -28,6 +29,16 @@
 img {
     width: 60px;
     border-radius: 50px;
+}
+
+button.unfollow {
+    font-size: 10px;
+    font-weight: 600;
+    width: 85px;
+    height: 25px;
+    padding: 6px;
+    margin: 0 18px;
+    margin-top: 4px;
 }
 
 .post-date {

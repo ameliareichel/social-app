@@ -11,6 +11,9 @@ const Post = (props) => {
 
     const [loginMessageVisibility, setLoginMessageVisibility] = useState(false);
 
+    const [unfollowButtonVisibility, setUnfollowButtonVisibility] = useState(true);
+
+
     const [ifUserLiked, setIfUserLiked] = useState(props.post.likes.filter(like => like.username === props.user?.username).length !== 0);
 
     const deletePost = (id) => {
@@ -34,6 +37,17 @@ const Post = (props) => {
             });
     };
 
+    const unfollowUser = (id) => {
+
+        axios.post('https://akademia108.pl/api/social-app/follows/disfollow', {
+            leader_id: id
+        })
+        .then(() => {
+            props.getLastPosts();
+        })
+        .catch(error => console.error(error));
+    };
+
     return (
         <div className='post'>
             <div className='post-info'>
@@ -44,6 +58,12 @@ const Post = (props) => {
                     <div className='user-name'>
                         <h3>{props.post.user.username}</h3>
                     </div>
+                    {unfollowButtonVisibility && props.user && <div className='unfollow-container'>
+                        {props.user && props.user.username !== props.post.user.username && <button className='button-add unfollow' onClick={() => {
+                            setUnfollowButtonVisibility(false);
+                            unfollowUser(props.post.user.id);
+                        }}>Unfollow</button>}
+                    </div>}
                 </div>
                 <div className='post-date'>
                     <p className='date'>{props.post.created_at.substring(0, 10)}</p>
@@ -77,6 +97,7 @@ const Post = (props) => {
                 <button className='confirm-button'><Link className='link-to-log' to='/login'>Log In</Link></button>
                 <button className='confirm-button' onClick={() => setLoginMessageVisibility(false)}>Cancel</button>
             </div>}
+
         </div>
     );
 };

@@ -48,7 +48,7 @@ const Home = (props) => {
             <div className='posts-list'>
                 {posts.map(post => {
                     return (
-                        <Post post={post} key={post.id} user={props.user} setPosts={setPosts} />
+                        <Post post={post} key={post.id} user={props.user} setPosts={setPosts} getLastPosts={getLastPosts} />
                     );
                 })}
             </div>

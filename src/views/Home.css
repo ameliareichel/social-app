@@ -2,12 +2,13 @@
     margin-bottom: 80px;
 }
 
-.more-posts {
+button.more-posts {
     margin: 0 auto;
     background-color: rgb(18, 13, 37);
     color: rgb(204, 202, 255);
     text-transform: uppercase;
     width: 150px;
+    height: 38px;
     border: none;
     border-radius: 12px;
     padding: 18px;
@@ -15,7 +16,7 @@
     box-shadow: rgb(119, 95, 255) 1px 2px 12px;
 }
 
-.more-posts:hover {
+button.more-posts:hover {
     color: rgb(204, 202, 255);
     background-color: rgb(119, 95, 255);
     box-shadow: rgb(119, 95, 255) 1px 1px 12px;

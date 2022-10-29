@@ -60,7 +60,7 @@ const Login = (props) => {
                 <input type="text" name='username' value={formInfo.username} onChange={inputChangeFunction} /><br />
                 <label htmlFor="password">Password</label><br />
                 <input type="password" name='password' value={formInfo.password} onChange={inputChangeFunction} /><br />
-                <input type="submit" value="Log in" />
+                <input type="submit" className='login' value="Log in" />
             </form>
         </div>
     );

@@ -18,7 +18,8 @@ label {
     margin-bottom: 15px;
 }
 
-input {
+input,
+input[type="submit"].login {
     margin-bottom: 10px;
     border: none;
     border-radius: 7px;
@@ -27,20 +28,22 @@ input {
 }
 
 input:hover,
-input:focus {
+input:focus,
+input[type="submit"].login {
     outline: none;
     box-shadow: rgb(119, 95, 255) 1px 1px 12px;
 }
 
-input[type="submit"] {
+input[type="submit"].login {
     color: rgb(18, 13, 37);
     text-transform: uppercase;
-    margin-top: 20px;
-    padding: 1px;
+    margin: 20px auto;
+    padding: 8px;
     width: 65px;
 }
 
-input[type="submit"]:hover {
+input[type="submit"].login:hover {
+    cursor: pointer;
     color: rgb(204, 202, 255);
     background-color: rgb(119, 95, 255);
 }

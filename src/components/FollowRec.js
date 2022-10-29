@@ -35,7 +35,7 @@ const FollowRec = (props) => {
             <h2 className="follow-recomm-title">Follows for you</h2>
             {recomms.map((recomm) => {
                 return (
-                    <div className="recomm-user-profile">
+                    <div className="recomm-user-profile" key={recomm.id}>
                         <img className="recomm-user-pfp" src={recomm.avatar_url} alt={recomm.username} />
                         <h4 className="recomm-user-username">{recomm.username}</h4>
                         <button className="button-add follow" onClick={() => followUser(recomm.id)} >Follow</button>
